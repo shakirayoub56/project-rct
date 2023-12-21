@@ -7,8 +7,13 @@
 .nav-logo{
     display: flex;
     align-items: center;
-    gap:10px;
+    gap:2px;
 
+}
+.nav-logo img{
+    height: 100px;
+    width: 100px;
+    margin-left:-10px ;
 }
 .nav-logo p {
     color: #171717;
@@ -77,4 +82,7 @@
     background: red;
     color:white;
 
+}
+span{
+    color: rgb(239, 3, 117);
 }
