@@ -4,10 +4,10 @@
     margin: 0px 0px 14px;
 }
 
-.shopcategory-indexsort {
+.shopcatnew {
     display: flex;
     justify-content: space-between;
-    margin: 0px 170px;
+    margin: 0px 63px;
     align-items: center;
 }
 
@@ -39,4 +39,19 @@
 
 .shop-category {
     overflow-x: hidden;
+}
+.shopcategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+
+
 }

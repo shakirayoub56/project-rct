@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
-import '../pages/pagesCss/ShopCategory.css'
-import { ShopContext } from '../context/ShopContext'
-import dropdown_icon from '../Components/Assets/dropdown_icon.png'
-import Item from '../Components/item/Item'
-const ShopCategory = (props) => {
+import React, { useContext } from 'react';
+import '../pages/pagesCss/ShopCategory.css';
+import { ShopContext } from '../context/ShopContext';
+import dropdown_icon from '../Components/Assets/dropdown_icon.png';
+import Item from '../Components/item/Item';
 
-  const { all_products } = useContext(ShopContext)
+const ShopCategory = (props) => {
+  const { all_products } = useContext(ShopContext);
+
   return (
     <div className='shop-category'>
       <img className='shopcategory-banner' src={props.banner} alt="" />
@@ -16,13 +17,13 @@ const ShopCategory = (props) => {
         </div>
       </div>
       <div className="shopcategory-products">
-
         {all_products ? (
-          all_products.map((item, i) => {
+          all_products.map((item) => {
             if (props.category === item.category) {
               return (
                 <Item
-                  key={i}
+                  key={item.id} // Assuming item.id is a unique identifier
+                  id={item.id} // Pass the id prop to the Item component
                   name={item.name}
                   image={item.image}
                   new_price={item.new_price}
@@ -37,9 +38,12 @@ const ShopCategory = (props) => {
           <p>Loading...</p> // or any loading indicator
         )}
       </div>
+      <div className="shopcategory-loadmore">
+        Explore More
+      </div>
       <hr/>
     </div>
-  )
-}
+  );
+};
 
-export default ShopCategory
+export default ShopCategory;
